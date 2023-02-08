@@ -28,7 +28,7 @@ export class FetchDataComponent implements OnInit {
   addSummary() {
     console.log(this.summary);
     var summary = {
-      summary: this.summary
+      summaryDesc: this.summary
     }
     this.http.post<string[]>(this.baseUrl + 'weatherforecast/AddSummaries', this.summary).subscribe(result => {
       this.getSummaries()
